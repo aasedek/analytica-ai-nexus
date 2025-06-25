@@ -1,7 +1,7 @@
-
 import { ArrowRight, Brain, Code2, Zap, Users, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -17,12 +17,14 @@ const Index = () => {
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</a>
-              <a href="#about" className="text-slate-600 hover:text-blue-600 transition-colors">About</a>
-              <a href="#contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                Get Started
-              </Button>
+              <Link to="/services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</Link>
+              <Link to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</Link>
+              <Link to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</Link>
+              <Link to="/get-started">
+                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -42,13 +44,17 @@ const Index = () => {
               Expert AI consultation and cutting-edge software engineering services to accelerate your digital transformation and unlock unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 rounded-full border-2 hover:bg-slate-50">
-                View Our Work
-              </Button>
+              <Link to="/get-started">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                  Start Your Journey
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/portfolio">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-4 rounded-full border-2 hover:bg-slate-50">
+                  View Our Work
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -279,10 +285,12 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-              Schedule a Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                Schedule a Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
